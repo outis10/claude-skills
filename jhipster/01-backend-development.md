@@ -1,4 +1,3 @@
-
 # JHipster Backend Development Skill
 
 ## Description
@@ -89,7 +88,7 @@ public class EntityDTO implements Serializable {
 
 // Mapper using MapStruct
 @Mapper(componentModel = "spring", uses = {RelatedEntityMapper.class})
-public interface EntityMapper extends EntityMapper<EntityDTO, Entity> {
+public interface EntityMapper extends BaseEntityMapper<EntityDTO, Entity> {
     
     @Mapping(source = "relatedEntity.id", target = "relatedEntityId")
     @Mapping(source = "relatedEntity.name", target = "relatedEntityName")
