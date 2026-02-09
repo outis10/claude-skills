@@ -43,3 +43,18 @@ Claude automatically selects the appropriate skill based on context:
 - "crea entidad jhipster" -> jhipster-backend
 - "genera componente react" -> jhipster-react-frontend
 - "setup jhipster completo" -> Uses all three skills
+
+
+Opcion 1: Clonar el repo y hacer symlink**
+
+En cada maquina:
+```bash
+git clone https://github.com/outis10/claude-skills.git ~/claude-skills
+mkdir -p ~/.claude/skills
+
+ln -s ~/claude-skills/jhipster/kalitron-suite ~/.claude/skills/
+ln -s ~/claude-skills/jhipster/jhipster-backend ~/.claude/skills/
+ln -s ~/claude-skills/jhipster/jhipster-react-frontend ~/.claude/skills/
+```
+
+Asi cuando hagas `git pull` se actualizan automaticamente.
