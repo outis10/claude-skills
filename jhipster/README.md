@@ -2,55 +2,44 @@
 
 Custom skills for Claude Code to assist with JHipster project development.
 
+## Structure
+
+```
+jhipster/
+├── kalitron-suite/
+│   └── SKILL.md              # KALITRON branding and project coordination
+├── jhipster-backend/
+│   └── SKILL.md              # Spring Boot backend patterns
+├── jhipster-react-frontend/
+│   ├── SKILL.md              # React frontend patterns
+│   └── references/
+│       └── component-examples.md  # Detailed component examples
+└── README.md
+```
+
 ## Skills
 
-1. **00-kalitron-suite-master.md** - Master skill for KALITRON branding and project coordination
-   - KALITRON banner management
-   - Project initialization
-   - Cross-cutting concerns
-
-2. **01-backend-development.md** - Spring Boot backend patterns
-   - Entity creation with JPA
-   - Service/Repository layers
-   - REST API controllers
-   - Liquibase migrations
-   - Security configuration
-   - DTOs and MapStruct mappers
-
-3. **02-react-frontend.md** - React frontend patterns
-   - TypeScript entity models
-   - Redux Toolkit state management
-   - CRUD view components
-   - Form validation
-   - Routing configuration
-   - WebSocket integration
+1. **kalitron-suite** - KALITRON banner management, project initialization, cross-cutting concerns
+2. **jhipster-backend** - Entity creation, service/repository layers, REST APIs, Liquibase, security, DTOs/MapStruct
+3. **jhipster-react-frontend** - TypeScript models, Redux Toolkit, CRUD views, forms, routing, WebSocket, i18n
 
 ## Installation
 
-Copy the `.md` files to your Claude Code skills directory:
+Copy the skill directories to your Claude Code skills location:
 
 ```bash
-# Copy all skills to the Claude Code custom skills location
-cp jhipster/*.md ~/.claude/skills/
+cp -r jhipster/kalitron-suite ~/.claude/skills/
+cp -r jhipster/jhipster-backend ~/.claude/skills/
+cp -r jhipster/jhipster-react-frontend ~/.claude/skills/
 ```
 
-Or reference them in your project's `.claude/settings.json`:
-
-```json
-{
-  "skills": [
-    "jhipster/00-kalitron-suite-master.md",
-    "jhipster/01-backend-development.md",
-    "jhipster/02-react-frontend.md"
-  ]
-}
-```
+Or place them in your project's `.claude/skills/` directory.
 
 ## Usage
 
-Claude will automatically use the appropriate skill based on context:
+Claude automatically selects the appropriate skill based on context:
 
-- "agrega el banner kalitron" -> Master skill (banner management)
-- "crea entidad jhipster" -> Backend Development skill
-- "genera componente react" -> React Frontend skill
+- "agrega el banner kalitron" -> kalitron-suite
+- "crea entidad jhipster" -> jhipster-backend
+- "genera componente react" -> jhipster-react-frontend
 - "setup jhipster completo" -> Uses all three skills
