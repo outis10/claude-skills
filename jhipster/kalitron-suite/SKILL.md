@@ -37,4 +37,5 @@ ${AnsiColor.BRIGHT_BLUE}:: KALITRON ::  Running Spring Boot ${spring-boot.versio
 ## Integration Notes
 - When user requests backend features (entities, services, APIs), defer to **jhipster-backend** skill
 - When user requests frontend features (components, pages, routing), defer to **jhipster-react-frontend** skill
+- When user requests Bootstrap themes or theme selector, defer to **bootswatch-theme-selector** skill
 - This skill focuses on: branding, project initialization, cross-cutting concerns
